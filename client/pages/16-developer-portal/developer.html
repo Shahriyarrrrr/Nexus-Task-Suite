@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="developer.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="dev-wrapper fade-dev">
+
+<h1 class="dev-title">Developer Portal</h1>
+
+<div class="dev-grid">
+
+<div class="key-card">
+<h3>API Keys</h3>
+<div id="keyBox">
+<div class="key">sk_live_XXXXXXXXXXXXXXXX</div>
+</div>
+<button id="regenKey" class="dev-btn">Regenerate Key</button>
+</div>
+
+<div class="webhook-card">
+<h3>Webhook Tester</h3>
+<input id="webhookUrl" placeholder="Webhook URL">
+<button id="sendWebhook" class="dev-btn">Send Test</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="developer.js"></script>
+
+</body>
+</html>

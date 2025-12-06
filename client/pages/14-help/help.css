@@ -1,0 +1,13 @@
+.help-wrapper { padding:40px; color:var(--light); animation:fadeHelp 0.8s forwards; opacity:0; }
+@keyframes fadeHelp { to {opacity:1;} }
+.help-title { font-size:32px; font-weight:700; background:linear-gradient(135deg,#ffffff,#fdcb6e); -webkit-background-clip:text; background-clip:text; color:transparent; margin-bottom:20px; }
+.faq { display:flex; flex-direction:column; gap:12px; max-width:800px; }
+.faq-item { background:rgba(255,255,255,0.05); border-radius:12px; overflow:hidden; }
+.faq-q { width:100%; text-align:left; background:transparent; padding:14px; font-size:16px; cursor:pointer; border:0; color:var(--light); }
+.faq-a { max-height:0; padding:0 14px; transition:max-height 0.35s ease; color:var(--light); opacity:0.95; }
+.faq-item.open .faq-a { max-height:200px; padding:12px 14px; }
+.contact { margin-top:20px; max-width:700px; display:flex; flex-direction:column; gap:10px; }
+.contact input, .contact textarea { padding:12px; border-radius:10px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12); color:var(--light); }
+.contact textarea { min-height:120px; resize:vertical; }
+#sendTicket { padding:12px 18px; border-radius:12px; background:var(--secondary); color:#fff; cursor:pointer; transition:var(--transition); }
+#sendTicket:hover { transform:translateY(-3px); box-shadow:var(--shadow); }

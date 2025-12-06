@@ -1,0 +1,17 @@
+const dateLib = {
+  startOfMonth(y,m){
+    return new Date(y,m,1);
+  },
+  endOfMonth(y,m){
+    return new Date(y,m+1,0);
+  },
+  formatShort(d){
+    const dt = new Date(d);
+    return dt.toLocaleDateString();
+  },
+  addDays(d,n){
+    const dt = new Date(d);
+    dt.setDate(dt.getDate()+n);
+    return dt;
+  }
+};

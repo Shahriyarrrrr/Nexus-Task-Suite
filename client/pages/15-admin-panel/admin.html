@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="admin-wrapper fade-admin">
+
+<h1 class="admin-title">Admin Panel</h1>
+
+<div class="admin-controls">
+<button id="refreshUsers" class="admin-btn">Refresh</button>
+<button id="createUser" class="admin-btn primary">Create User</button>
+</div>
+
+<div class="user-table" id="userTable"></div>
+
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>

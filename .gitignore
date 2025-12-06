@@ -1,0 +1,15 @@
+(
+echo node_modules/
+echo .env
+echo .DS_Store
+echo dist/
+echo *.log
+echo client/assets/video/
+echo client/assets/audio/
+echo *.mp4
+echo *.mov
+echo *.avi
+echo *.zip
+echo .idea/
+echo .vscode/
+) > .gitignore

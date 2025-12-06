@@ -1,0 +1,56 @@
+.x-modal-overlay {
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(10px);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:2000;
+opacity:0;
+transition:0.35s ease;
+}
+
+.x-modal-overlay.active {
+display:flex;
+opacity:1;
+}
+
+.x-modal {
+width:480px;
+background:rgba(255,255,255,0.09);
+border-radius:18px;
+padding:28px;
+backdrop-filter:blur(28px) saturate(180%);
+box-shadow:0 0 30px rgba(0,0,0,0.35);
+animation:modalPop 0.45s ease;
+}
+
+@keyframes modalPop {
+0%{transform:scale(0.75);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+.x-modal-close {
+width:32px;
+height:32px;
+border-radius:50%;
+background:linear-gradient(135deg,#6c5ce7,#00cec9);
+cursor:pointer;
+position:absolute;
+right:22px;
+top:22px;
+transition:0.3s ease;
+}
+
+.x-modal-close:hover {
+transform:rotate(90deg) scale(1.1);
+}
+
+.x-modal-content {
+margin-top:20px;
+color:var(--light);
+}

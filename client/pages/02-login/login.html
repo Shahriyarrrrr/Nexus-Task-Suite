@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="login-wrapper">
+<div class="particle-bg"></div>
+
+<div class="login-box fade-in-login">
+
+<h2 class="login-title">Welcome Back</h2>
+
+<div class="role-switch">
+<button data-role="user" class="role-btn active">User</button>
+<button data-role="admin" class="role-btn">Admin</button>
+<button data-role="developer" class="role-btn">Developer</button>
+</div>
+
+<div class="input-group">
+<input type="text" id="email" placeholder="Email">
+</div>
+
+<div class="input-group">
+<input type="password" id="password" placeholder="Password">
+</div>
+
+<button class="login-btn" id="loginSubmit">Login</button>
+
+<div class="login-links">
+<a href="#">Forgot Password?</a>
+<a href="../03-register/register.html">Create an Account</a>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+.x-footer {
+width:100%;
+height:70px;
+padding:0 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+position:fixed;
+bottom:0;
+left:0;
+background:rgba(255,255,255,0.07);
+backdrop-filter:blur(18px) saturate(180%);
+border-top:1px solid rgba(255,255,255,0.09);
+z-index:1200;
+animation:footerRise 0.6s ease;
+}
+
+@keyframes footerRise {
+0%{opacity:0;transform:translateY(40px);}
+100%{opacity:1;transform:translateY(0);}
+}
+
+.f-left {
+display:flex;
+flex-direction:column;
+gap:2px;
+}
+
+.f-logo {
+font-size:16px;
+font-weight:700;
+background:linear-gradient(135deg,#ffffff,#6c5ce7);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.f-copy {
+font-size:12px;
+opacity:0.65;
+}
+
+.f-center {
+display:flex;
+gap:20px;
+}
+
+.f-link {
+cursor:pointer;
+font-size:14px;
+opacity:0.75;
+transition:0.25s;
+}
+
+.f-link:hover {
+opacity:1;
+transform:translateY(-2px);
+}
+
+.f-right {
+display:flex;
+gap:14px;
+}
+
+.f-social {
+width:36px;
+height:36px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+font-size:13px;
+background:rgba(255,255,255,0.09);
+transition:0.25s ease;
+}
+
+.f-social:hover {
+background:linear-gradient(135deg,#6c5ce7,#00cec9);
+color:#fff;
+transform:scale(1.1);
+box-shadow:0 0 14px #6c5ce7;
+}

@@ -1,0 +1,54 @@
+<header class="x-header">
+
+    <div class="x-left">
+        <div class="x-hamburger" id="hamburgerBtn"></div>
+        <div class="x-logo">NEXUS</div>
+    </div>
+
+    <div class="x-center">
+        <div class="x-search-box">
+            <input type="text" id="headerSearch" placeholder="Search..." class="x-search-input">
+            <div class="x-search-icon"></div>
+        </div>
+        <div class="x-nav-item" data-link="/client/pages/04-dashboard/dashboard.html">Dashboard</div>
+        <div class="x-nav-item" data-link="/client/pages/08-projects/projects.html">Projects</div>
+        <div class="x-nav-item" data-link="/client/pages/05-calendar/calendar.html">Calendar</div>
+        <div class="x-nav-item" data-link="/client/pages/06-notes/notes.html">Notes</div>
+    </div>
+
+    <div class="x-right">
+        <div class="x-notify" id="notifyBtn">
+            <span class="x-notify-dot"></span>
+        </div>
+
+        <button id="themeToggle" class="x-theme-btn"></button>
+
+        <div class="x-avatar" id="profileBtn"></div>
+
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+
+    <div class="x-dropdown" id="notifyDropdown">
+        <div class="xd-item">New task assigned</div>
+        <div class="xd-item">Project updated</div>
+        <div class="xd-item">Payment confirmed</div>
+    </div>
+
+    <div class="x-dropdown" id="profileDropdown">
+        <div class="xd-item" data-link="/client/pages/07-settings/settings.html">Settings</div>
+        <div class="xd-item" id="profileLogout">Logout</div>
+    </div>
+
+</header>
+
+<div class="x-mobile-menu" id="mobileMenu">
+    <div class="mm-item" data-link="/client/pages/04-dashboard/dashboard.html">Dashboard</div>
+    <div class="mm-item" data-link="/client/pages/08-projects/projects.html">Projects</div>
+    <div class="mm-item" data-link="/client/pages/05-calendar/calendar.html">Calendar</div>
+    <div class="mm-item" data-link="/client/pages/06-notes/notes.html">Notes</div>
+    <div class="mm-item" data-link="/client/pages/12-media/media.html">Media</div>
+    <div class="mm-item" data-link="/client/pages/14-help/help.html">Help</div>
+</div>
+
+<link rel="stylesheet" href="/client/components/header.css">
+<script src="/client/components/header.js"></script>

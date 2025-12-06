@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="projects.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="projects-wrapper fade-projects">
+
+<h1 class="projects-title">Projects</h1>
+
+<div class="kanban-board">
+
+    <div class="kanban-column">
+        <h2>To Do</h2>
+        <div class="kanban-list" id="todoList" data-col="todo"></div>
+    </div>
+
+    <div class="kanban-column">
+        <h2>In Progress</h2>
+        <div class="kanban-list" id="progressList" data-col="progress"></div>
+    </div>
+
+    <div class="kanban-column">
+        <h2>Done</h2>
+        <div class="kanban-list" id="doneList" data-col="done"></div>
+    </div>
+
+</div>
+
+<div class="add-task-box">
+    <input id="taskInput" type="text" placeholder="New Task...">
+    <button id="addTaskBtn">Add</button>
+</div>
+
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="projects.js"></script>
+
+</body>
+</html>

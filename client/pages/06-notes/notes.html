@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="notes.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="notes-wrapper fade-notes">
+
+<h1 class="notes-title">Notes</h1>
+
+<div class="notes-layout">
+
+<div class="notes-list" id="notesList"></div>
+
+<div class="notes-editor">
+<textarea id="noteArea" placeholder="Write something..."></textarea>
+
+<div class="editor-actions">
+<button class="note-btn" id="saveNote">Save</button>
+<button class="note-btn" id="deleteNote">Delete</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="notes.js"></script>
+
+</body>
+</html>

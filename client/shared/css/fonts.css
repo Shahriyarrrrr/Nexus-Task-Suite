@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/client/assets/fonts/poppins/Poppins-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/client/assets/fonts/poppins/Poppins-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/client/assets/fonts/poppins/Poppins-Bold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/client/assets/fonts/inter/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/client/assets/fonts/inter/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/client/assets/fonts/jetbrains/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+}

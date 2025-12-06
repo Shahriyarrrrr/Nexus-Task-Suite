@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="register-wrapper">
+<div class="reg-bg"></div>
+
+<div class="register-box fade-in-reg">
+
+<h2 class="reg-title">Create Your Account</h2>
+
+<div class="reg-stepper">
+<div class="step active" data-step="1">1</div>
+<div class="step" data-step="2">2</div>
+<div class="step" data-step="3">3</div>
+</div>
+
+<div class="reg-content" id="regContent">
+
+<div class="step-page step-page-1">
+<div class="input-group">
+<input type="text" id="regName" placeholder="Full Name">
+</div>
+<div class="input-group">
+<input type="email" id="regEmail" placeholder="Email">
+</div>
+<button class="reg-btn next-btn" data-next="2">Next</button>
+</div>
+
+<div class="step-page step-page-2 hidden">
+<div class="input-group">
+<input type="password" id="regPassword" placeholder="Password">
+</div>
+<div class="input-group">
+<input type="password" id="regConfirm" placeholder="Confirm Password">
+</div>
+<button class="reg-btn prev-btn" data-prev="1">Back</button>
+<button class="reg-btn next-btn" data-next="3">Next</button>
+</div>
+
+<div class="step-page step-page-3 hidden">
+<div class="role-select">
+<button class="role-choice active" data-role="user">User</button>
+<button class="role-choice" data-role="admin">Admin</button>
+<button class="role-choice" data-role="developer">Developer</button>
+</div>
+<button class="reg-btn prev-btn" data-prev="2">Back</button>
+<button class="reg-btn finish-btn" id="finishReg">Create Account</button>
+</div>
+
+</div>
+
+<div class="reg-links">
+<a href="../02-login/login.html">Already have an account?</a>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="register.js"></script>
+
+</body>
+</html>

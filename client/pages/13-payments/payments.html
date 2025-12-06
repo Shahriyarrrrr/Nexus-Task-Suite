@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="payments.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="payments-wrapper fade-payments">
+
+<h1 class="payments-title">Payments</h1>
+
+<div class="payments-grid">
+
+<div class="sub-card">
+<h3>Subscription</h3>
+<div class="price">Pro • $9.99 / month</div>
+<button id="subscribeBtn" class="pay-btn">Subscribe</button>
+</div>
+
+<div class="card-pay">
+<h3>One-time Purchase</h3>
+
+<div class="card-form" id="cardForm">
+<input id="cardName" placeholder="Name on card" type="text">
+<input id="cardNumber" placeholder="Card number" type="text">
+
+<div class="card-row">
+<input id="cardExp" placeholder="MM/YY" type="text">
+<input id="cardCvc" placeholder="CVC" type="text">
+</div>
+
+<button id="payBtn" class="pay-btn">Pay $4.99</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="payments.js"></script>
+
+</body>
+</html>

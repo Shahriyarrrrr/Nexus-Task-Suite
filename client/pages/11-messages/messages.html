@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="messages.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="msg-wrapper fade-msg">
+
+<h1 class="msg-title">Messages</h1>
+
+<div class="msg-container">
+
+<div class="msg-list" id="msgList"></div>
+
+<div class="msg-input-box">
+<input id="msgInput" type="text" placeholder="Type message...">
+<button id="msgSend">Send</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="messages.js"></script>
+
+</body>
+</html>

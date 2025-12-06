@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="dash-wrapper">
+
+<div class="dash-sidebar"></div>
+
+<div class="dash-content fade-dash">
+<h1 class="dash-title">Dashboard</h1>
+
+<div class="dash-grid">
+<div class="dash-card large" id="taskCard"></div>
+<div class="dash-card" id="statsCard"></div>
+<div class="dash-card" id="calendarCard"></div>
+<div class="dash-card" id="notesCard"></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="help.css">
+</head>
+
+<body>
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="help-wrapper fade-help">
+
+<h1 class="help-title">Help & Support</h1>
+
+<div class="faq">
+
+<div class="faq-item">
+<button class="faq-q">How to add tasks?</button>
+<div class="faq-a">Use the Projects page and add tasks in the input. Drag between columns to update state.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q">How to backup data?</button>
+<div class="faq-a">Export from the Settings > Backup option or enable cloud sync in integrations.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q">Contact support</button>
+<div class="faq-a">Open a ticket or use the contact form below.</div>
+</div>
+
+</div>
+
+<div class="contact">
+<input id="supportEmail" placeholder="Your email" type="email">
+<textarea id="supportMsg" placeholder="Describe the issue"></textarea>
+<button id="sendTicket">Send Ticket</button>
+</div>
+
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="help.js"></script>
+
+</body>
+</html>

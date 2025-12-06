@@ -1,0 +1,113 @@
+document.addEventListener("DOMContentLoaded",function(){
+  const body=document.body;
+
+  function initLiveSearch(){
+    document.querySelectorAll("[data-live-search]").forEach(input=>{
+      const selector=input.dataset.liveSearchTarget;
+      input.addEventListener("input",function(){
+        const q=this.value.trim().toLowerCase();
+        if(!selector) return;
+        document.querySelectorAll(selector).forEach(item=>{
+          const text=(item.innerText||"").toLowerCase();
+          if(!q||text.includes(q)) item.classList.remove("live-hidden"); else item.classList.add("live-hidden");
+        });
+      });
+    });
+  }
+
+  function initPageTransitions(){
+    document.querySelectorAll("a").forEach(a=>{
+      if(a.target && a.target!=="_self") return;
+      a.addEventListener("click",function(e){
+        const href=this.getAttribute("href");
+        if(!href||href.startsWith("#")||href.startsWith("mailto:")||href.startsWith("tel:")||this.hasAttribute("data-no-anim")) return;
+        e.preventDefault();
+        const root=document.querySelector(".page-padding-bottom")||document.body;
+        root.classList.add("page-transition-exit");
+        requestAnimationFrame(()=>root.classList.add("page-transition-go"));
+        setTimeout(()=>location.href=href,380);
+      });
+    });
+    const root=document.querySelector(".page-padding-bottom")||document.body;
+    root.classList.add("page-transition-enter");
+    requestAnimationFrame(()=>root.classList.add("page-transition-ready"));
+  }
+
+  function initParallax(){
+    const targets=Array.from(document.querySelectorAll("[data-parallax]"));
+    if(!targets.length) return;
+    window.addEventListener("mousemove",e=>{
+      const cx=window.innerWidth/2;
+      const cy=window.innerHeight/2;
+      const px=(e.clientX-cx)/cx;
+      const py=(e.clientY-cy)/cy;
+      targets.forEach(el=>{
+        const depth=parseFloat(el.getAttribute("data-parallax"))||0.06;
+        const tx=px*depth*30;
+        const ty=py*depth*24;
+        el.style.transform=`translate3d(${tx}px,${ty}px,0)`;
+      });
+    });
+  }
+
+  function initMagnetic(){
+    document.querySelectorAll(".magnetic").forEach(btn=>{
+      btn.addEventListener("mousemove",function(e){
+        const rect=this.getBoundingClientRect();
+        const relX=(e.clientX-rect.left)-(rect.width/2);
+        const relY=(e.clientY-rect.top)-(rect.height/2);
+        const rx=(relX/rect.width)*22;
+        const ry=(relY/rect.height)*18;
+        const inner=this.querySelector(".magnetic-inner") || this;
+        inner.style.transform=`translate3d(${rx}px,${ry}px,0) scale(1.04)`;
+      });
+      btn.addEventListener("mouseleave",function(){
+        const inner=this.querySelector(".magnetic-inner") || this;
+        inner.style.transform=`translate3d(0,0,0) scale(1)`;
+      });
+    });
+  }
+
+  function initCursorTrail(){
+    const trailRoot=document.createElement("div");
+    trailRoot.className="cursor-trail";
+    document.body.appendChild(trailRoot);
+    const dots=[];
+    for(let i=0;i<6;i++){
+      const d=document.createElement("div");
+      d.className="cursor-dot";
+      d.style.opacity=(1 - i*0.12).toString();
+      trailRoot.appendChild(d);
+      dots.push(d);
+    }
+    let mouseX=0;
+    let mouseY=0;
+    window.addEventListener("mousemove",e=>{mouseX=e.clientX; mouseY=e.clientY;});
+    let t=0;
+    function animate(){ t+=1;
+      dots.forEach((dot,i)=>{
+        const k=0.12 + i*0.06;
+        const x = mouseX - (i*8);
+        const y = mouseY - (i*6);
+        dot.style.transform = `translate3d(${x}px,${y}px,0)`;
+        dot.style.opacity = (1 - i*0.12).toString();
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  }
+
+  function initLiveSearchInputsOnPages(){
+    document.querySelectorAll("input[type='search'], input[data-live-search]").forEach(i=>{
+      if(!i.dataset.liveSearchTarget) return;
+      i.setAttribute("placeholder", i.getAttribute("placeholder") || "Search...");
+    });
+  }
+
+  initLiveSearch();
+  initPageTransitions();
+  initParallax();
+  initMagnetic();
+  initCursorTrail();
+  initLiveSearchInputsOnPages();
+});

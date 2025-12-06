@@ -1,0 +1,52 @@
+.x-sidebar {
+position:fixed;
+left:0;
+top:70px;
+width:260px;
+height:calc(100vh - 70px);
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(22px);
+border-right:1px solid rgba(255,255,255,0.06);
+padding:22px 18px;
+z-index:1100;
+animation:sideFade 0.6s ease;
+}
+
+@keyframes sideFade {
+0%{opacity:0;transform:translateX(-40px);}
+100%{opacity:1;transform:translateX(0);}
+}
+
+.x-side-title {
+font-size:14px;
+opacity:0.6;
+margin-bottom:18px;
+letter-spacing:1px;
+}
+
+.x-side-item {
+padding:10px 14px;
+margin-bottom:10px;
+border-radius:10px;
+cursor:pointer;
+font-size:15px;
+opacity:0.85;
+transition:0.25s ease;
+}
+
+.x-side-item:hover {
+background:rgba(255,255,255,0.12);
+opacity:1;
+transform:translateX(6px);
+}
+
+.x-side-item.active {
+background:linear-gradient(135deg,#6c5ce7,#00cec9);
+color:#fff;
+box-shadow:0 0 12px #6c5ce7;
+transform:translateX(10px);
+}
+
+.danger {
+color:#ff7675;
+}

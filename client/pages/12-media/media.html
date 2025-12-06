@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/client/shared/css/reset.css">
+<link rel="stylesheet" href="/client/shared/css/variables.css">
+<link rel="stylesheet" href="/client/shared/css/utilities.css">
+<link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <input id="mediaUpload" type="file">
+<button id="mediaUploadBtn">Upload</button>
+<div id="mediaGallery"></div>
+
+
+<div id="headerMount"></div>
+<div id="sidebarMount"></div>
+<div id="modalMount"></div>
+<div id="toastMount"></div>
+<div id="footerMount"></div>
+
+<div class="page-padding-bottom">
+
+<div class="media-wrapper fade-media">
+
+<h1 class="media-title">Media Library</h1>
+
+<div class="upload-box">
+<input type="file" id="mediaUpload" multiple>
+<button id="uploadBtn" class="media-btn">Upload</button>
+</div>
+
+<div class="media-filters">
+<button class="filter-btn active" data-type="all">All</button>
+<button class="filter-btn" data-type="image">Images</button>
+<button class="filter-btn" data-type="audio">Audio</button>
+<button class="filter-btn" data-type="video">Video</button>
+</div>
+
+<div class="media-grid" id="mediaGrid"></div>
+
+</div>
+
+</div>
+
+<script src="/client/shared/js/init-ui.js"></script>
+<script src="media.js"></script>
+
+</body>
+</html>

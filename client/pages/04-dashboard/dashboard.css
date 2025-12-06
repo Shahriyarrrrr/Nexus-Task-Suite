@@ -1,0 +1,62 @@
+.dash-wrapper {
+display:flex;
+min-height:100vh;
+background:#0f0f17;
+}
+
+.dash-sidebar {
+width:260px;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(20px);
+border-right:1px solid rgba(255,255,255,0.1);
+}
+
+.dash-content {
+flex:1;
+padding:40px;
+color:var(--light);
+}
+
+.fade-dash {
+opacity:0;
+animation:dashFade 0.8s forwards;
+}
+
+@keyframes dashFade {
+to {opacity:1;}
+}
+
+.dash-title {
+font-size:40px;
+font-weight:700;
+background:linear-gradient(135deg,#ffffff,#fdcb6e);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+margin-bottom:30px;
+}
+
+.dash-grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.dash-card {
+background:rgba(255,255,255,0.07);
+border-radius:var(--radius);
+padding:20px;
+backdrop-filter:blur(14px);
+transition:var(--transition);
+min-height:140px;
+}
+
+.dash-card.large {
+grid-column:span 2;
+min-height:220px;
+}
+
+.dash-card:hover {
+transform:translateY(-6px) scale(1.02);
+box-shadow:var(--shadow);
+}

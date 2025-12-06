@@ -1,0 +1,7 @@
+.offline-wrapper { min-height:100vh; display:flex; justify-content:center; align-items:center; background:linear-gradient(180deg,#0b0b11,#12121a); color:var(--light); }
+.offline-card { width:520px; padding:36px; border-radius:16px; background:rgba(255,255,255,0.04); backdrop-filter:blur(12px); text-align:center; box-shadow:var(--shadow); }
+.offline-title { font-size:28px; font-weight:700; margin-bottom:10px; background:linear-gradient(135deg,#ffffff,#fdcb6e); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.offline-desc { opacity:0.85; margin-bottom:20px; }
+.offline-actions { display:flex; gap:12px; justify-content:center; }
+.offline-btn { padding:12px 18px; border-radius:12px; background:var(--secondary); color:#fff; cursor:pointer; }
+.offline-btn.alt { background:transparent; border:1px solid rgba(255,255,255,0.08); }

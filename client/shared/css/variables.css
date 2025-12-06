@@ -1,0 +1,33 @@
+@import url("./fonts.css");
+
+:root {
+  --font-main: "Inter", sans-serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+:root{
+  --bg:#0b0b10;
+  --panel:rgba(255,255,255,0.04);
+  --light:#eaeaf2;
+  --muted:rgba(233,233,240,0.6);
+  --primary:#6c5ce7;
+  --secondary:#00cec9;
+  --accent:#fdcb6e;
+  --radius:12px;
+  --shadow:0 8px 28px rgba(0,0,0,0.5);
+  --transition: all 0.25s cubic-bezier(.2,.9,.3,1);
+  --glass: rgba(255,255,255,0.06);
+  --bg-gradient: linear-gradient(135deg,#6c5ce7,#00cec9);
+}
+[data-theme="light"]{
+  --bg:#f5f7fb;
+  --panel:rgba(10,12,18,0.04);
+  --light:#061223;
+  --muted:rgba(6,18,35,0.6);
+  --primary:#2b2be7;
+  --secondary:#008f8f;
+  --accent:#ffb86b;
+  --shadow:0 6px 20px rgba(0,0,0,0.06);
+}
+body{ background:var(--bg); color:var(--light); }

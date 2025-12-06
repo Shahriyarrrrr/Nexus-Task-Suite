@@ -1,0 +1,16 @@
+const dd = {
+  enableDrag(el) {
+    el.draggable = true;
+    el.addEventListener('dragstart', (e)=> {
+      e.dataTransfer.setData('text/plain', el.dataset.id||'');
+    });
+  },
+  makeDropZone(zone, handler) {
+    zone.addEventListener('dragover', (e)=> e.preventDefault());
+    zone.addEventListener('drop', (e)=> {
+      e.preventDefault();
+      const id = e.dataTransfer.getData('text/plain');
+      handler(id, zone);
+    });
+  }
+};

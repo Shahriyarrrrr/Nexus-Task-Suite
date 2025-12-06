@@ -1,0 +1,88 @@
+.team-wrapper {
+padding:40px;
+color:var(--light);
+opacity:0;
+animation:fadeTeam 0.8s forwards;
+}
+
+@keyframes fadeTeam {
+to {opacity:1;}
+}
+
+.team-title {
+font-size:36px;
+font-weight:700;
+background:linear-gradient(135deg,#ffffff,#fdcb6e);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+margin-bottom:25px;
+}
+
+.team-grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.member-card {
+background:rgba(255,255,255,0.06);
+border-radius:var(--radius);
+padding:20px;
+text-align:center;
+backdrop-filter:blur(12px);
+transition:var(--transition);
+}
+
+.member-card:hover {
+transform:translateY(-6px) scale(1.02);
+box-shadow:var(--shadow);
+}
+
+.member-img {
+width:70px;
+height:70px;
+border-radius:50%;
+margin:0 auto 12px;
+background:var(--bg-gradient);
+}
+
+.member-name {
+font-size:18px;
+margin-bottom:6px;
+}
+
+.member-role {
+opacity:0.7;
+font-size:14px;
+}
+
+.invite-box {
+display:flex;
+gap:10px;
+margin-top:30px;
+}
+
+#inviteEmail {
+flex:1;
+padding:12px;
+border-radius:var(--radius);
+background:rgba(255,255,255,0.07);
+border:1px solid rgba(255,255,255,0.12);
+color:var(--light);
+outline:none;
+}
+
+#inviteBtn {
+padding:12px 20px;
+border-radius:var(--radius);
+background:var(--secondary);
+color:#fff;
+cursor:pointer;
+transition:var(--transition);
+}
+
+#inviteBtn:hover {
+transform:translateY(-3px);
+box-shadow:var(--shadow);
+}
